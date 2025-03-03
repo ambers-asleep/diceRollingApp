@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: FFF5E4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.threedice.HelloController">
+   <children>
+      <VBox layoutX="17.0" layoutY="52.0" prefHeight="396.0" prefWidth="567.0" style="-fx-border-color: #6A9C89; -fx-border-width: 10;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="451.0" prefWidth="567.0">
+               <children>
+                  <Label alignment="CENTER" text="Three Dice Game" textFill="#6a9c89">
+                     <font>
+                        <Font name="Impact" size="39.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <GridPane prefHeight="200.0" prefWidth="545.0" style="-fx-background-color: CD5C08;">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="diceOneImage" fitHeight="150.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="diceTwoImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+                        <ImageView fx:id="diceThreeImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="536.0" style="-fx-border-width: 10; -fx-border-color: #CD5C08;">
+                     <children>
+                        <GridPane prefHeight="55.0" prefWidth="556.0" style="-fx-background-color: C1D8C3;">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="264.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="25.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="gambleButton" alignment="CENTER" mnemonicParsing="false" onAction="#buttonHandler" style="-fx-background-color: CD5C08;" text="Gamble!" textFill="#c1d8c3" GridPane.columnIndex="2">
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Impact" size="27.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="scoreRollOneLabel" text="Score:" textFill="#cd5c08">
+                                 <font>
+                                    <Font name="Impact" size="27.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="scoreNumberLabel" prefHeight="17.0" prefWidth="45.0" text="0" textFill="#cd5c08" wrapText="true" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Impact" size="27.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
